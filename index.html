@@ -6,13 +6,14 @@
   </head>
   <body>
     <h1> Fileghost Keys Generation </h1>
-
+    <p>Save this key in a safe place and don't share them with anyone</p>
+    <p><a onclick="location.reload()">refresh</a> this page to generate a new key</p>
     <py-config>
       packages = ["fileghost"]
     </py-config>
     <py-script>
       import fileghost.fileghost as fg
-      print("Save these keys in a safe place and don't share them with anyone")
+      
       print(fg.keygen().to_keystore())
     </py-script>
 
