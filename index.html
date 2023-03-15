@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  </head>
+  <body>
+    <py-config>
+      packages = ["fileghost"]
+    </py-config>
+    <py-script>
+      import fileghost.fileghost as fg
+      def genkeys():
+          print(fg.keygen().to_keystore())
+    </py-script>
+<button onclick="genkeys()">generate</button>
+  </body>
+</html>
